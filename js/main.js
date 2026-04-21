@@ -9,18 +9,47 @@ const revealObserver = new IntersectionObserver(entries => {
 }, { threshold: 0.12 });
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-// ── CONTACT FORM: basic submit handler ───────────────────────
-// Replace the action URL below with your form backend (Formspree, Netlify, etc.)
-document.querySelector('.f-submit')?.addEventListener('click', () => {
-  const name  = document.querySelector('input[type="text"]')?.value;
-  const email = document.querySelector('input[type="email"]')?.value;
-  if (!name || !email) {
-    alert('Please fill in at least your name and email.');
-    return;
-  }
-  // TODO: wire up to a real form handler (Formspree / EmailJS / Netlify Forms)
-  alert('Thanks! We\'ll be in touch within one business day.');
-});
+// ── CONTACT FORM: send to Formspree ──────────────────────────
+(function () {
+  const form = document.getElementById('contact-form');
+  const status = document.getElementById('form-status');
+  if (!form || !status) return;
+
+  form.addEventListener('submit', async event => {
+    event.preventDefault();
+
+    const endpoint = form.getAttribute('action') || '';
+    if (endpoint.includes('REPLACE_WITH_YOUR_FORM_ID')) {
+      status.textContent = 'Form is not connected yet. Add your Formspree form ID first.';
+      status.className = 'form-status error';
+      return;
+    }
+
+    const submitBtn = form.querySelector('button[type="submit"]');
+    if (submitBtn) submitBtn.disabled = true;
+    status.textContent = 'Sending...';
+    status.className = 'form-status';
+
+    try {
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' }
+      });
+
+      if (!response.ok) throw new Error('submit failed');
+
+      form.reset();
+      status.textContent = 'Thanks! Your request was sent. We will contact you shortly.';
+      status.className = 'form-status success';
+    } catch (error) {
+      status.textContent = 'Could not send right now. Please try again in a minute.';
+      status.className = 'form-status error';
+    } finally {
+      if (submitBtn) submitBtn.disabled = false;
+    }
+  });
+})();
 
 // ── RENDER CAROUSEL ──────────────────────────────────────────
 (function () {
@@ -70,7 +99,7 @@ document.querySelector('.f-submit')?.addEventListener('click', () => {
     btn.classList.toggle('expanded', expanded);
     const textNode = btn.firstChild;
     if (textNode && textNode.nodeType === Node.TEXT_NODE) {
-      textNode.textContent = expanded ? 'Show Less ' : 'View All 23 Photos ';
+      textNode.textContent = expanded ? 'Show Less Photos ' : 'View All Photos ';
     }
     if (labelEl) labelEl.textContent = '↓';
   });

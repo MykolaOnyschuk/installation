@@ -479,6 +479,11 @@ section:nth-of-type(even){ background:#fafbfc; }
   font-family:var(--ff-head);font-size:28px;
   color:var(--white);margin-bottom:8px;
 }
+.contact-form{
+  display:flex;
+  flex-direction:column;
+  gap:24px;
+}
 .f-row{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
 .f-group{display:flex;flex-direction:column;gap:8px;}
 .f-label{font-size:12px;font-weight:600;letter-spacing:.5px;color:var(--muted);}
@@ -500,6 +505,20 @@ textarea.f-input{min-height:120px;resize:vertical;}
   align-self:flex-start;
 }
 .f-submit:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 12px 36px rgba(74,144,217,.35);}
+.f-submit:disabled{
+  opacity:.65;
+  cursor:not-allowed;
+  transform:none;
+  box-shadow:none;
+}
+.form-status{
+  min-height:20px;
+  font-size:12px;
+  letter-spacing:.03em;
+  color:var(--muted);
+}
+.form-status.success{color:#1b7f46;}
+.form-status.error{color:#b44b42;}
 
 /* ─── FOOTER ─── */
 footer{

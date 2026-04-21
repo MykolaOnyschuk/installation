@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Utah School Furniture — Installation Excellence</title>
+<title>Space Ready — Installation Excellence</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -14,8 +14,8 @@
 <!-- NAV -->
 <nav id="nav">
   <a href="#" class="nav-logo">
-    <div class="nav-logo-mark">U</div>
-    Utah School Furniture
+    <div class="nav-logo-mark">S</div>
+    Space Ready
   </a>
   <div class="nav-center">
     <a href="#work" class="nav-link">Our Work</a>
@@ -35,12 +35,12 @@
   </div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <div class="hero-tag">Utah's Premier Furniture Installer — Schools &amp; Offices</div>
+    <div class="hero-tag">Space Ready — Full-Service Furniture Installation for Any Space</div>
     <h1 class="hero-h1">
       Built for<br>the way<br><em>people learn and work.</em>
     </h1>
     <p class="hero-p">
-      We install furniture for Utah schools and businesses — on time, on budget, and spotless when we leave.
+      We install all kinds of furniture for schools, offices, healthcare, hospitality, retail, and more — on time, on budget, and spotless when we leave.
     </p>
     <div class="hero-actions">
       <a href="#contact" class="btn-gold">Get a Free Quote <span>→</span></a>
@@ -75,12 +75,12 @@
 <!-- SPLIT FEATURE 1 — Schools -->
 <section class="split-feature" id="work">
   <div class="split-text">
-    <div class="section-eyebrow reveal">School Installations</div>
+    <div class="section-eyebrow reveal">All Furniture Types</div>
     <h2 class="section-h2 reveal rd1">
       Every desk.<br>Every chair.<br><em>Every detail.</em>
     </h2>
     <p class="section-lead reveal rd2">
-      We handle every piece of school furniture — assembly, placement, and full cleanup — so your staff can focus on students, not boxes.
+      From classrooms and conference rooms to lounges, labs, and specialty spaces, we handle assembly, placement, and full cleanup from start to finish.
     </p>
   </div>
   <div class="split-img">
@@ -96,12 +96,12 @@
     <div class="split-img-overlay-rev"></div>
   </div>
   <div class="split-text" style="background:var(--black);">
-    <div class="section-eyebrow reveal">Office Environments</div>
+    <div class="section-eyebrow reveal">Commercial & Institutional Spaces</div>
     <h2 class="section-h2 reveal rd1">
       Spaces that<br><em>inspire</em><br>great work.
     </h2>
     <p class="section-lead reveal rd2">
-      We install office furniture on your schedule, with zero disruption to your business.
+      We install furniture for any environment on your schedule, with minimal disruption to daily operations.
     </p>
   </div>
 </section>
@@ -434,9 +434,14 @@
       <div class="gallery-overlay"></div>
       <div class="gallery-label">Finished Space</div>
     </div>
+    <div class="gallery-item gallery-extra" data-label="Workbenches">
+      <img src="images/gallery/gallery-24.jpg" alt="Workbenches">
+      <div class="gallery-overlay"></div>
+      <div class="gallery-label">Workbenches</div>
+    </div>
   </div>
   <div class="gallery-view-all">
-    <button class="gallery-view-btn" id="gallery-view-btn">View All 23 Photos <span>↓</span></button>
+    <button class="gallery-view-btn" id="gallery-view-btn">View All Photos <span>↓</span></button>
   </div>
 </section>
 
@@ -459,30 +464,34 @@
         <div class="trust-item"><div class="trust-dot"></div>On-time guarantee on every project</div>
       </div>
     </div>
-    <div class="contact-footer-text reveal">Utah School Furniture · Since 2013</div>
+    <div class="contact-footer-text reveal">Space Ready · Since 2013</div>
   </div>
 
   <div class="contact-right">
     <div class="cf-title">Fill out the form below</div>
-    <div class="f-row">
-      <div class="f-group"><label class="f-label">Your Name</label><input class="f-input" type="text" placeholder="Jane Smith"></div>
-      <div class="f-group"><label class="f-label">School / District</label><input class="f-input" type="text" placeholder="Jordan School District"></div>
-    </div>
-    <div class="f-row">
-      <div class="f-group"><label class="f-label">Email Address</label><input class="f-input" type="email" placeholder="jane@district.edu"></div>
-      <div class="f-group"><label class="f-label">Phone Number</label><input class="f-input" type="tel" placeholder="(801) 555-0000"></div>
-    </div>
-    <div class="f-group" style="margin-bottom:24px;"><label class="f-label">City / Location in Utah</label><input class="f-input" type="text" placeholder="Salt Lake City, UT"></div>
-    <div class="f-group"><label class="f-label">Project Details</label><textarea class="f-input" placeholder="Type of furniture, number of rooms, timeline, anything else..."></textarea></div>
-    <button class="f-submit">Send My Request <span>→</span></button>
+    <form class="contact-form" id="contact-form" action="https://formspree.io/f/mojynnyn" method="POST">
+      <div class="f-row">
+        <div class="f-group"><label class="f-label" for="contact-name">Your Name</label><input class="f-input" id="contact-name" name="name" type="text" placeholder="Jane Smith" required></div>
+        <div class="f-group"><label class="f-label" for="contact-company">Company / Organization</label><input class="f-input" id="contact-company" name="company" type="text" placeholder="Jordan School District"></div>
+      </div>
+      <div class="f-row">
+        <div class="f-group"><label class="f-label" for="contact-email">Email Address</label><input class="f-input" id="contact-email" name="email" type="email" placeholder="jane@district.edu" required></div>
+        <div class="f-group"><label class="f-label" for="contact-phone">Phone Number</label><input class="f-input" id="contact-phone" name="phone" type="tel" placeholder="(801) 555-0000"></div>
+      </div>
+      <div class="f-group" style="margin-bottom:24px;"><label class="f-label" for="contact-city">City / Location</label><input class="f-input" id="contact-city" name="location" type="text" placeholder="Salt Lake City, UT"></div>
+      <div class="f-group"><label class="f-label" for="contact-details">Project Details</label><textarea class="f-input" id="contact-details" name="project_details" placeholder="Type of furniture, number of rooms, timeline, anything else..." required></textarea></div>
+      <input type="hidden" name="_subject" value="New quote request from Space Ready website">
+      <p class="form-status" id="form-status" aria-live="polite"></p>
+      <button class="f-submit" type="submit">Send My Request <span>→</span></button>
+    </form>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
   <div class="footer-logo">
-    <div class="footer-logo-mark">U</div>
-    Utah School Furniture
+    <div class="footer-logo-mark">S</div>
+    Space Ready
   </div>
   <p>© 2025 · Salt Lake City, Utah · Licensed &amp; Insured</p>
   <p>Serving all 29 Utah counties</p>
