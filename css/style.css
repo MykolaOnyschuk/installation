@@ -46,8 +46,8 @@ section:nth-of-type(even){ background:#fafbfc; }
 #nav.compact .nav-logo,
 #nav.compact .nav-link{color:var(--white);}
 .nav-logo{
-  font-family:var(--ff-head);font-weight:900;font-size:20px;
-  letter-spacing:.5px;color:#C8D8DC;
+  font-family:var(--ff-head);font-weight:700;font-size:18px;
+  letter-spacing:.35px;color:#C8D8DC;
   display:flex;align-items:center;gap:10px;
   text-decoration:none;
 }
@@ -102,7 +102,7 @@ section:nth-of-type(even){ background:#fafbfc; }
 }
 .hero-content{
   position:relative;z-index:2;
-  padding:0 64px 100px;
+  padding:120px 64px 100px;
   max-width:900px;
 }
 .hero-tag{
@@ -609,7 +609,7 @@ footer p{font-size:13px;color:var(--muted);}
   #nav{padding:20px 24px;}
   #nav.compact{padding:14px 24px;}
   .nav-center{display:none;}
-  .hero-content{padding:0 24px 80px;}
+  .hero-content{padding:110px 24px 80px;}
   .metrics{grid-template-columns:1fr 1fr;}
   .split-feature{grid-template-columns:1fr;}
   .split-img{min-height:320px;}
