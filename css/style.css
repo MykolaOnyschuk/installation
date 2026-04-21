@@ -512,13 +512,27 @@ textarea.f-input{min-height:120px;resize:vertical;}
   box-shadow:none;
 }
 .form-status{
-  min-height:20px;
-  font-size:12px;
-  letter-spacing:.03em;
-  color:var(--muted);
+  min-height:44px;
+  padding:12px 14px;
+  border-radius:6px;
+  border:1px solid var(--border);
+  background:var(--surface);
+  font-size:14px;
+  font-weight:600;
+  line-height:1.45;
+  letter-spacing:.01em;
+  color:var(--white);
 }
-.form-status.success{color:#1b7f46;}
-.form-status.error{color:#b44b42;}
+.form-status.success{
+  color:#0f5f32;
+  background:rgba(27,127,70,.12);
+  border-color:rgba(27,127,70,.35);
+}
+.form-status.error{
+  color:#8f2f28;
+  background:rgba(180,75,66,.12);
+  border-color:rgba(180,75,66,.35);
+}
 
 /* ─── FOOTER ─── */
 footer{

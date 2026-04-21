@@ -17,6 +17,12 @@ document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
   form.addEventListener('submit', async event => {
     event.preventDefault();
+    if (!form.checkValidity()) {
+      status.textContent = '';
+      status.className = 'form-status';
+      form.reportValidity();
+      return;
+    }
 
     const endpoint = form.getAttribute('action') || '';
     if (endpoint.includes('REPLACE_WITH_YOUR_FORM_ID')) {
@@ -40,8 +46,9 @@ document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
       if (!response.ok) throw new Error('submit failed');
 
       form.reset();
-      status.textContent = 'Thanks! Your request was sent. We will contact you shortly.';
+      status.textContent = 'Thanks! Your request was sent. We will contact during one business day.';
       status.className = 'form-status success';
+      alert('Thanks! Your request was sent. We will contact during one business day.');
     } catch (error) {
       status.textContent = 'Could not send right now. Please try again in a minute.';
       status.className = 'form-status error';
