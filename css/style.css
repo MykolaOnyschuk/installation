@@ -195,8 +195,8 @@ section:nth-of-type(even){ background:#fafbfc; }
 }
 .section-h2 em{font-style:italic;color:var(--gold);}
 .section-lead{
-  font-size:17px;font-weight:300;color:var(--muted);
-  line-height:1.8;max-width:540px;
+  font-size:19px;font-weight:300;color:var(--muted);
+  line-height:1.75;max-width:580px;
 }
 
 /* ─── SPLIT FEATURE ─── */
@@ -217,11 +217,11 @@ section:nth-of-type(even){ background:#fafbfc; }
 .split-feature:hover .split-img img{transform:scale(1.04);}
 .split-img-overlay{
   position:absolute;inset:0;
-  background:linear-gradient(to right,rgba(232,238,240,1) 0%,rgba(232,238,240,.7) 10%,rgba(232,238,240,.2) 25%,transparent 40%);
+  background:linear-gradient(to right,rgba(232,238,240,1) 0%,rgba(232,238,240,.5) 6%,rgba(232,238,240,.1) 14%,transparent 22%);
 }
 .split-img-overlay-rev{
   position:absolute;inset:0;
-  background:linear-gradient(to left,rgba(244,246,247,1) 0%,rgba(244,246,247,.7) 10%,rgba(244,246,247,.2) 25%,transparent 40%);
+  background:linear-gradient(to left,rgba(244,246,247,1) 0%,rgba(244,246,247,.5) 6%,rgba(244,246,247,.1) 14%,transparent 22%);
 }
 .split-caption{
   position:absolute;bottom:32px;left:32px;
